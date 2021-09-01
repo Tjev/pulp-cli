@@ -24,6 +24,15 @@ class PulpRpmDistributionContext(PulpEntityContext):
     NULLABLES = {"publication"}
 
 
+class PulpRpmPackageContext(PulpEntityContext):
+    ENTITY = "rpm package"
+    ENTITIES = "rpm packages"
+    HREF = "rpm_package_href"
+    LIST_ID = "content_rpm_packages_list"
+    READ_ID = "content_rpm_packages_read"
+    CREATE_ID = "content_rpm_packages_create"
+
+
 class PulpRpmPublicationContext(PulpEntityContext):
     ENTITY = "publication"
     HREF = "rpm_rpm_publication_href"
