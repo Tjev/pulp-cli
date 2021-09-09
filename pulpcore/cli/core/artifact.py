@@ -4,7 +4,7 @@ from typing import IO
 import click
 
 from pulpcore.cli.common.context import PulpContext, pass_entity_context, pass_pulp_context
-from pulpcore.cli.common.generic import chunk_size_option, href_option, list_command, show_command
+from pulpcore.cli.common.generic import chunk_size_option, destroy_command, href_option, list_command, show_command
 from pulpcore.cli.core.context import PulpArtifactContext
 
 _ = gettext.gettext
@@ -22,6 +22,7 @@ lookup_options = [href_option]
 
 artifact.add_command(list_command(decorators=filter_options))
 artifact.add_command(show_command(decorators=lookup_options))
+artifact.add_command(destroy_command(decorators=[href_option]))
 
 
 @artifact.command()

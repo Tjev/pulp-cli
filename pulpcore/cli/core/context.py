@@ -44,6 +44,7 @@ class PulpArtifactContext(PulpEntityContext):
     LIST_ID = "artifacts_list"
     READ_ID = "artifacts_read"
     CREATE_ID = "artifacts_create"
+    DELETE_ID = "artifacts_delete"
 
     def upload(self, file: IO[bytes], chunk_size: int = 1000000) -> Any:
         upload_ctx = PulpUploadContext(self.pulp_ctx)
