@@ -31,6 +31,7 @@ class PulpRpmPackageContext(PulpEntityContext):
     LIST_ID = "content_rpm_packages_list"
     READ_ID = "content_rpm_packages_read"
     CREATE_ID = "content_rpm_packages_create"
+    DELETE_ID = "content_rpm_packages_delete"
 
 
 class PulpRpmPublicationContext(PulpEntityContext):

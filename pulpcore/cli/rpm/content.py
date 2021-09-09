@@ -12,6 +12,7 @@ from pulpcore.cli.common.context import (
 from pulpcore.cli.common.generic import (
     chunk_size_option,
     create_command,
+    destroy_command,
     href_option,
     list_command,
     show_command,
@@ -100,6 +101,7 @@ create_options = [
 content.add_command(list_command(decorators=list_options))
 content.add_command(show_command(decorators=lookup_options))
 content.add_command(create_command(decorators=create_options))
+content.add_command(destroy_command(decorators=[href_option]))
 
 
 @content.command()
