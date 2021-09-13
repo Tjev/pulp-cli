@@ -74,11 +74,12 @@ list_options = [
     click.option("--fields"),
     click.option("--name"),
     click.option("--name-in", "name__in"),
+    click.option("--package-href"),
     click.option("--release"),
     click.option("--release-in", "release__in"),
+    click.option("--repository-version"),
     click.option("--version"),
     click.option("--version-in", "version__in"),
-    click.option("--repository-version"),
 ]
 lookup_options = [
     href_option,

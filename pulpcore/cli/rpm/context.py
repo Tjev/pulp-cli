@@ -3,6 +3,7 @@ import gettext
 from pulpcore.cli.common.context import (
     EntityDefinition,
     PluginRequirement,
+    PulpContentContext,
     PulpEntityContext,
     PulpRemoteContext,
     PulpRepositoryContext,
@@ -24,7 +25,7 @@ class PulpRpmDistributionContext(PulpEntityContext):
     NULLABLES = {"publication"}
 
 
-class PulpRpmPackageContext(PulpEntityContext):
+class PulpRpmPackageContext(PulpContentContext):
     ENTITY = "rpm package"
     ENTITIES = "rpm packages"
     HREF = "rpm_package_href"
@@ -77,6 +78,7 @@ class PulpRpmRepositoryContext(PulpRepositoryContext):
     UPDATE_ID = "repositories_rpm_rpm_partial_update"
     DELETE_ID = "repositories_rpm_rpm_delete"
     SYNC_ID = "repositories_rpm_rpm_sync"
+    MODIFY_ID = "repositories_rpm_rpm_modify"
     VERSION_CONTEXT = PulpRpmRepositoryVersionContext
     CAPABILITIES = {"pulpexport": [PluginRequirement("rpm", "3.3.0")]}
 
