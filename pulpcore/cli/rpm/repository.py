@@ -87,7 +87,7 @@ def repository(ctx: click.Context, pulp_ctx: PulpContext, repo_type: str) -> Non
 
 package_options = [
     click.option(
-        "--pulp-href",
+        "--package-href",
         callback=_content_callback,
         expose_value=False,
         help=_("Href of the rpm package to use"),
